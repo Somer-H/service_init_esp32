@@ -34,7 +34,7 @@ func (m *MySQL) ChangeStatus(name string, status string) (*entities.Esp32, error
     }else{
         return nil, fmt.Errorf("no se ha encontrado el dispositivo")
     }
-    if esp32Get.Status == "activate"{
+    if esp32Get.Status == "activate" {
         return &esp32Get, fmt.Errorf("el dispositivo ya está activado")
     }
 
